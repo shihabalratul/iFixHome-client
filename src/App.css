@@ -12,9 +12,11 @@
 }
 
 .grow:hover {
-	 transform: scale(1.07); 
-	 cursor: pointer;
-	}
+transform: scale(1.07); 
+cursor: pointer;
+	
+}
+	
 
 .profile-pic{
 	height:100px;

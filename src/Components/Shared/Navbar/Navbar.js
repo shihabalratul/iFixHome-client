@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import admin from '../../../images/admin.svg';
 
 const Navbar = () => {
+	const auth = JSON.parse(localStorage.getItem("userInfo"));
+	const handleSignOut = () => {
+		localStorage.setItem('userInfo', JSON.stringify({}));
+	}
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container-fluid mx-2">
@@ -20,7 +25,7 @@ const Navbar = () => {
 								<a className="nav-link" aria-current="page" href="#">Home</a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">Dashboard</a>
+								<Link className="nav-link" to="/dashboard">Dashboard</Link>
 							</li>
 							<li className="nav-item">
 								<a className="nav-link" href="#">Appointments</a>
@@ -28,9 +33,14 @@ const Navbar = () => {
 							<li className="nav-item me-2">
 								<a className="nav-link" href="#">About Us</a>
 							</li>
-							<li className="nav-item">
-								<button className="btn btn-outline-warning" type="submit">Sign in</button>
+							{auth ? <li className="nav-item">
+								<Link onClick={handleSignOut} className="btn btn-outline-warning" to="/login">Sign Out</Link>
 							</li>
+								:
+								<li className="nav-item">
+									<Link className="btn btn-outline-warning" to="/login">Sign in</Link>
+								</li>
+							}
 						</ul>
 
 					</div>

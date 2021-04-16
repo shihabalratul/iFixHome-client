@@ -1,0 +1,18 @@
+.sidebar{
+
+    position: fixed;
+}
+.sidebar Link{
+    text-decoration: none;
+}
+.btn-side:hover{
+    color:black !important;
+    background-color: #ffd900;
+}
+.btn-side:focus-within{
+    color:black !important;
+    background-color: #ffd900;
+}
+.sidebar svg{
+    margin-right: 5px;
+}

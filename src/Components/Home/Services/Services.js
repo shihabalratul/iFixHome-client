@@ -53,14 +53,14 @@ const Services = () => {
 
 	]
 	return (
-		<section className="m-5">
+		<main className="m-5">
 			<h1 className="fw-bold text-warning text-center">Our Services</h1>
 			<div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 my-4">
 				{
 					services.map(service => <ServiceCard key={service._id} service={service} />)
 				}
 			</div>
-		</section>
+		</main>
 	);
 };
 
