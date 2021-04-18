@@ -7,7 +7,9 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 
-firebase.initializeApp(firebaseConfig);
+if (firebase.apps.length === 0) {
+	firebase.initializeApp(firebaseConfig);
+}
 
 
 const Login = () => {
