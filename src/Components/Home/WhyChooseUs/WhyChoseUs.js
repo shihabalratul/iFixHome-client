@@ -1,7 +1,6 @@
 import React from 'react';
 import group from '../../../images/group.svg';
 import shield from '../../../images/shield.svg';
-import help from '../../../images/help.svg';
 import WhyChooseUsCard from '../WhyChooseUsCard/WhyChooseUsCard';
 
 const WhyChoseUs = () => {

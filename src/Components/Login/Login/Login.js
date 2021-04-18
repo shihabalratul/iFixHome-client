@@ -28,10 +28,7 @@ const Login = () => {
 				}
 				localStorage.setItem('userInfo', JSON.stringify(userInfo));
 				history.replace(from);
-
-			}).catch((error) => {
-				var errorCode = error.code;
-				var errorMessage = error.message;
+				window.location.reload()
 
 			});
 	}

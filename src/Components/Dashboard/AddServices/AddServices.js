@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form';
 import Sidebar from '../Sidebar/Sidebar';
 
 const AddServices = () => {
-	const { register, handleSubmit, watch, formState: { errors } } = useForm();
-	const onSubmit = data => {
+	const { register, handleSubmit, formState: { errors } } = useForm();
+	const onSubmit = (data, e) => {
 		const formData = new FormData();
 		formData.append('name', data.name);
 		formData.append('price', data.price);
@@ -18,10 +18,12 @@ const AddServices = () => {
 			// 	'Content-Type': 'multipart/form-data'
 			// },
 			method: 'post',
-			url: 'http://localhost:5000/addServices',
+			url: 'https://desolate-ravine-36439.herokuapp.com/addServices',
 			data: formData
 		})
-			.then(res => console.log(res))
+			.then(data => {
+				e.target.reset();
+			})
 	};
 	return (
 		<div className="row">
@@ -31,6 +33,7 @@ const AddServices = () => {
 			<div className="col-md-10">
 
 				<form className="m-5 p-5 shadow rounded-3" onSubmit={handleSubmit(onSubmit)}>
+					<h3 className="text-warning fw-bold mb-3">Add Services</h3>
 					<div className="mb-3">
 						<label htmlFor="name" className="form-label">Service Name</label>
 						<input type="text" className="form-control" {...register("name", { required: true })} />

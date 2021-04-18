@@ -51,8 +51,8 @@ const Footer = () => {
 						</div>
 					</FooterCol>
 				</div>
-				<div className="copyRight text-center">
-					<p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+				<div className="p-3 text-white text-center bg-dark">
+					<p>© iFixHome  {(new Date()).getFullYear()} All Rights Reserved</p>
 				</div>
 			</div>
 		</footer>

@@ -6,7 +6,7 @@ const SharedCard = ({ data, topImage }) => {
 		<div className="m-3">
 			<div className={`card border-0 shadow rounded-3 ${!topImage && 'bg-light'}`}>
 				{
-					topImage ? <img src={img} className="card-img-top" alt="..." />
+					topImage ? <img src={img} className="card-img-top card-photo h-100" alt="..." />
 						:
 						<img className="profile-pic d-flex mx-auto mt-4 rounded-circle img-fluid" src={img} alt="" />
 				}

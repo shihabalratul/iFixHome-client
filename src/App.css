@@ -9,6 +9,12 @@
 
 .grow{
 	transition: all .2s ease-in-out;
+	overflow:hidden;
+}
+.grow img{
+	height:200px;
+	transition: all .5s ease-in-out;
+	
 }
 
 .grow:hover {
@@ -16,10 +22,27 @@ transform: scale(1.07);
 cursor: pointer;
 	
 }
+
+.grow:hover img{
+	transform: scale(1.3); 
+	cursor: pointer;
+	object-fit: cover;
+	width:100%;
 	
+		
+	}
 
 .profile-pic{
-	height:100px;
-	width:100px;
+	height:80px;
+	width:80px;
 	object-fit: cover;
+}
+
+.card-photo{
+	object-fit: cover;
+
+}
+
+.img-parent{
+	height:200px;
 }

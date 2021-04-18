@@ -1,7 +1,7 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import tomCruise from '../../../images/tomCruise.jpg';
 import SharedCard from '../SharedCard/SharedCard';
 
 const responsive = {
@@ -22,41 +22,21 @@ const responsive = {
 	}
 };
 const Review = () => {
-	const reviews = [
-		{
-			_id: 1,
-			name: 'Tom Cruise',
-			img: tomCruise,
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque fuga numquam sed quaerat molestias similique commodi accusamus architecto non.'
-		},
-		{
-			_id: 2,
-			name: 'Tom Cruise',
-			img: tomCruise,
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque fuga numquam sed quaerat molestias similique commodi accusamus architecto non.'
-		},
-		{
-			_id: 3,
-			name: 'Tom Cruise',
-			img: tomCruise,
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque fuga numquam sed quaerat molestias similique commodi accusamus architecto non.'
-		},
-		{
-			_id: 4,
-			name: 'Tom Cruise',
-			img: tomCruise,
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque fuga numquam sed quaerat molestias similique commodi accusamus architecto non.'
-		},
-		{
-			_id: 5,
-			name: 'Tom Cruise',
-			img: tomCruise,
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque fuga numquam sed quaerat molestias similique commodi accusamus architecto non.'
-		},
-	]
+	const [reviews, setReviews] = useState([]);
+
+	useEffect(() => {
+		axios({
+			method: 'get',
+			url: 'https://desolate-ravine-36439.herokuapp.com/reviews'
+		})
+			.then(data => {
+				setReviews(data.data)
+			})
+
+	}, [])
 
 	return (
-		<div className="m-5">
+		<div className="m-5 pb-5">
 			<h1 className="fw-bolder text-warning my-5 text-center">Customer Review</h1>
 
 			<Carousel

@@ -2,7 +2,6 @@ import React from 'react';
 import carousel1 from '../../.../../../images/carousel1.png';
 import carousel2 from '../../.../../../images/carousel2.png';
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
 
 const HeaderMain = () => {
 	const carouselItems = [
