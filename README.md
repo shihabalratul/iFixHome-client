@@ -17,6 +17,6 @@
 
 It is a fairly dynamic website. Homepage is full responsive. User can book a service and share review. Admin can update booking status. If logged in email is admin email then it shows 5 option in dashboard sidebar. Admin can add or remove services.. If it is user it shows 3 option. User cannot access anything which is for admin only.
 
-## Live code : https://ifixhome.netlify.app/
+## Live site : https://ifixhome.netlify.app/
 
 ## Server Side Code: https://github.com/shihabalratul/iFixHome-server
