@@ -10,6 +10,8 @@
 6.  FontAwesome
 7.  Stripe Payment
 8.  Firebase Authentication
+9.  Express.js (For Server side)
+10.  MongoDB (For database)
 
 ## Functionality:
 
