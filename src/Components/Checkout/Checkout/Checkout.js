@@ -10,8 +10,8 @@ const Checkout = () => {
 
 	useEffect(() => {
 		axios.get('https://desolate-ravine-36439.herokuapp.com/getService?id=' + _id)
-			.then(async data => {
-				const newCheckoutInfo = await {
+			.then(data => {
+				const newCheckoutInfo = {
 					name: user.name,
 					email: user.email,
 					status: 'Pending',
@@ -19,7 +19,7 @@ const Checkout = () => {
 					price: data.data[0].price,
 					paymentMethod: 'Card'
 				}
-				await setCheckoutInfo(newCheckoutInfo)
+				 setCheckoutInfo(newCheckoutInfo)
 
 			})
 			.catch(err => console.log(err))
