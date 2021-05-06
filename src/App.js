@@ -28,8 +28,8 @@ function App() {
       url: 'https://desolate-ravine-36439.herokuapp.com/checkAdmin',
       data: user
     })
-      .then(async data => {
-        await setIsAdmin(data.data)
+      .then(data => {
+        setIsAdmin(data.data)
       })
   }, [user])
 
