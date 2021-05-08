@@ -1,5 +1,17 @@
 # iFixHome
 
+
+
+## Live site : https://ifixhome.netlify.app/
+
+## Server Side Code: https://github.com/shihabalratul/iFixHome-server
+
+## Functionality:
+
+1. User can order a service. After payment order will be saved on MongoDB.
+2. Dashboard options are different based on user and admin.
+3. Admin can add or remove new services and change the order status from the dashboard. User can order a service, see their order status and add a review from the dashboard.
+
 ## Developed with:
 
 1.  React
@@ -13,13 +25,4 @@
 9.  Express.js (For Server side)
 10.  MongoDB (For database)
 
-## Functionality:
 
-1. User can order a service. After payment order will be saved on MongoDB.
-2. Dashboard options are different based on user and admin.
-3. Admin can add or remove new services and change the order status from the dashboard. User can order a service, see their order status and add a review from the dashboard.
-
-
-## Live site : https://ifixhome.netlify.app/
-
-## Server Side Code: https://github.com/shihabalratul/iFixHome-server
