@@ -15,7 +15,10 @@
 
 ## Functionality:
 
-It is a fairly dynamic website. Homepage is full responsive. User can book a service and share review. Admin can update booking status. If logged in email is admin email then it shows 5 option in dashboard sidebar. Admin can add or remove services.. If it is user it shows 3 option. User cannot access anything which is for admin only.
+1. User can order a service. After payment order will be saved on MongoDB.
+2. Dashboard options are different based on user and admin.
+3. Admin can add or remove new services and change the order status from the dashboard. User can order a service, see their order status and add a review from the dashboard.
+
 
 ## Live site : https://ifixhome.netlify.app/
 
